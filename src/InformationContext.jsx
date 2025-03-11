@@ -40,6 +40,7 @@ const DOORS = [
     icon: "BD",
     name: "Technik budownictwa",
     url: "/budownictwa",
+    videoId: "ujteXRw6ZnI",
     color: "#F9B051",
   },
   {
@@ -47,6 +48,7 @@ const DOORS = [
     iconImage: landscapeImage,
     name: "Technik architektury krajobrazu",
     url: "/architektura",
+    videoId: "3FGq5XcDTVw",
     color: "#FDE54B",
   },
   {
@@ -60,7 +62,11 @@ const DOORS = [
   .map((value) => ({ value, sort: Math.random() }))
   .sort((a, b) => a.sort - b.sort)
   .map(({ value }) => value);
-const contextValue = { DOORS };
+
+const getByUrl = (target) => {
+  return DOORS.filter((value) => value.url == "/" + target)[0];
+};
+const contextValue = { DOORS, getByUrl };
 export const InformationContext = createContext(contextValue);
 export default function InformationContextProvider({ children }) {
   return (

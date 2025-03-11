@@ -1,8 +1,10 @@
-export default function Video({ name }) {
+import { Fade } from "react-awesome-reveal";
+
+export default function Video({ title, src }) {
   return (
-    <>
-      <h1>{name}</h1>
-      <p>Tutaj będą filmiki...</p>
-    </>
+    <Fade>
+      <h1>{title}</h1>
+      <video src={src} controls autoPlay></video>
+    </Fade>
   );
 }

@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router";
 import szkolaImage from "../assets/szkola.jpg";
 import { useCallback, useState } from "react";
+import { Fade, Bounce } from "react-awesome-reveal";
 export default function Index() {
   const navigate = useNavigate();
   const [isClicked, setClicked] = useState(false);
@@ -14,14 +15,14 @@ export default function Index() {
     setTimeout(() => navigate("/drzwi"), 800);
   }, [isLocked, setLocked, setClicked, isClicked, navigate]);
   return (
-    <>
+    <Fade>
       <section
         className={`main-section ${isClicked ? "clicked" : ""}`}
         onClick={onClick}
       >
         <img className="school-image" src={szkolaImage} />
-        <p>Kliknij aby wejść do szkoły</p>
+        <Bounce className="title">Kliknij aby wejść do szkoły</Bounce>
       </section>
-    </>
+    </Fade>
   );
 }

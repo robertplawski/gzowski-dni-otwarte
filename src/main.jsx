@@ -9,6 +9,7 @@ import InformationContextProvider from "./InformationContext.jsx";
 import Doors from "./routes/Doors.jsx";
 import Interior from "./routes/Interior.jsx";
 import Index from "./routes/Index.jsx";
+import { Fade } from "react-awesome-reveal";
 createRoot(document.getElementById("root")).render(
   <InformationContextProvider>
     <BrowserRouter basename={import.meta.env.BASE_URL}>

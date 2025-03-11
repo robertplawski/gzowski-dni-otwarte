@@ -1,6 +1,7 @@
 import { useCallback, useContext, useState } from "react";
 import Door from "../Door";
 import { InformationContext } from "../InformationContext";
+import { Fade } from "react-awesome-reveal";
 
 // dwa okienka teoria i praktyka
 
@@ -25,7 +26,7 @@ function Doors() {
     }`;
   }, [scrollPercentage]);
   return (
-    <>
+    <Fade>
       <h1>Wybierz swoją ścieżkę kariery...</h1>
       <div className={getClassname()} onScroll={onScroll}>
         <div className="door-container">
@@ -35,7 +36,7 @@ function Doors() {
         </div>
       </div>
       <h2>W gzowskim, każde drzwi stoją przed tobą otworem</h2>
-    </>
+    </Fade>
   );
 }
 
