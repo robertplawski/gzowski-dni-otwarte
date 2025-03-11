@@ -14,17 +14,24 @@ export default function Index() {
     setLocked(true);
     setTimeout(() => navigate("/drzwi"), 800);
   }, [isLocked, setLocked, setClicked, isClicked, navigate]);
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const fullscreen = useCallback(async () => {
     document.body.requestFullscreen();
-  }, []);
+    setIsFullscreen(true);
+  }, [setIsFullscreen]);
   return (
     <Fade>
       <section className={`main-section ${isClicked ? "clicked" : ""}`}>
-        <button onClick={fullscreen} className="fullscreen">
-          Fullscreen
-        </button>
+        {!isFullscreen && (
+          <button onClick={fullscreen} className="fullscreen">
+            Fullscreen
+          </button>
+        )}
+
         <img onClick={onClick} className="school-image" src={szkolaImage} />
-        <Bounce className="title">Kliknij aby wejść do szkoły</Bounce>
+        <Fade direction="up" className="title">
+          Kliknij, aby poznać naszą szkołę
+        </Fade>
       </section>
     </Fade>
   );

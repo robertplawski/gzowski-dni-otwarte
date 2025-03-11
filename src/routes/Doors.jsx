@@ -35,7 +35,7 @@ function Doors() {
           ))}
         </div>
       </div>
-      <h2>W gzowskim, każde drzwi stoją przed tobą otworem</h2>
+      <h2>W "Gzowskim", każde drzwi stoją przed tobą otworem</h2>
     </Fade>
   );
 }
