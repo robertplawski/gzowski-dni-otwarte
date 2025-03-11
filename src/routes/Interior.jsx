@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 import { InformationContext } from "../InformationContext";
 import { Fade } from "react-awesome-reveal";
 import Video from "./Video";
@@ -17,6 +17,9 @@ export default function Interior() {
           <YoutubeVideo videoId={object.videoId} />
         </div>
       </div>
+      <Link to="/">
+        <button>Powrót do lobby</button>
+      </Link>
     </Fade>
   );
 }

@@ -6,7 +6,9 @@ export default function YoutubeVideo({ title, videoId = "M66U_DuMCS8" }) {
       <h1>{title}</h1>
       <iframe
         src={
-          "https://www.youtube.com/embed/" + videoId + "?autoplay=1&controls=0"
+          "https://www.youtube.com/embed/" +
+          videoId +
+          "?autoplay=1&controls=0&rel=0"
         }
         title=""
         frameBorder="0"

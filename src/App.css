@@ -221,5 +221,7 @@ section.videos {
 iframe {
   aspect-ratio: 16/9;
   width: auto;
-  height: 70vh;
+  background-color: black;
+  width: 120vmin;
+  margin: 2rem;
 }
