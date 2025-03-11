@@ -11,15 +11,21 @@ export default function Interior() {
   const object = getByUrl(params.name);
   return (
     <Fade>
-      <div className="videos">
-        <h1>{object.name}</h1>
-        <div className="videos-container">
+      <div className="videos-container">
+        <div
+          className={
+            "videos-horizontal " + (object.secondaryVideoId ? "dual" : "")
+          }
+        >
           <YoutubeVideo videoId={object.videoId} />
+          {object.secondaryVideoId && (
+            <YoutubeVideo autoplay={0} videoId={object.secondaryVideoId} />
+          )}
         </div>
+        <Link to="/">
+          <button className="back">Powrót do strony głównej</button>
+        </Link>
       </div>
-      <Link to="/">
-        <button>Powrót do lobby</button>
-      </Link>
     </Fade>
   );
 }
