@@ -9,7 +9,7 @@ export default function YoutubeVideo({
       src={
         "https://www.youtube.com/embed/" +
         videoId +
-        `?autoplay=${autoplay}&controls=1&rel=0`
+        `?autoplay=${autoplay}&controls=0&rel=0`
       }
       title=""
       frameBorder="0"
