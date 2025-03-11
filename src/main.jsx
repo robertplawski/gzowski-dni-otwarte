@@ -11,7 +11,7 @@ import Interior from "./routes/Interior.jsx";
 import Index from "./routes/Index.jsx";
 createRoot(document.getElementById("root")).render(
   <InformationContextProvider>
-    <BrowserRouter basename="/">
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/drzwi" element={<Doors />} />

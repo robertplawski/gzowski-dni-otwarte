@@ -2,6 +2,8 @@ import { useCallback, useContext, useState } from "react";
 import Door from "../Door";
 import { InformationContext } from "../InformationContext";
 
+// dwa okienka teoria i praktyka
+
 function Doors() {
   const { DOORS } = useContext(InformationContext);
   const [isLocked, setLocked] = useState(false);
