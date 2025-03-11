@@ -206,6 +206,7 @@
   font-size: 2rem;
   pointer-events: none;
   font-weight: 800;
+  margin: 1rem;
   bottom: 5rem;
 }
 .main-section.clicked {
